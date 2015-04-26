@@ -1,0 +1,4 @@
+import os
+os.getcwd()		#returns directory path
+execfile("filename.py")	#executes python file
+os.chdir(r'C:/Users/tgunter/Documents/ai/scripts/')    # mv to this directory

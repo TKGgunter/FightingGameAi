@@ -1,0 +1,61 @@
+Character:
+int
+6A1508
+
+Percent Health:
+float
+006A0E98
+18
+90
+30
+c8
+
+Ultra Meter:
+float
+006A0E98
+18
+90
+40
+b8
+
+Super Meter:
+float
+006A0E98
+18
+90
+38
+8c
+
+Position X:
+float
+006A0E8C
+8
+70
+
+Position Y:
+float
+006A0E8C
+8
+74
+
+Movement State:
+int
+006A0E8C
+8
+b0
+18
+
+Number of Buttons:
+int
+6A2880
+
+Frames Since:
+int
+6A2884
+
+Button Pressed:
+int
+6A277C
+
+Number Buttons Saved:
+32 

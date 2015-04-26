@@ -1,0 +1,64 @@
+pause menu   address = SSFIV.exe+6A2284      1 byte
+Frame counter         SSFIV.exe+6a0eb0    +    28            4 byte   Frames start before the match begins ====This can be used as a a timer 
+In Match    address =  SSFIV.exe+659764        1 byte
+Ultra active address
+
+
+Character P2 address =                 SSFIV.exe+6A17C0            2 byte 
+Health of player 2 %  address =         "SSFIV.exe"+006A0E98 +  18 + 90 + a0 +c8      float  
+Grey health 
+ultra meter         address = "SSFIV.exe"+006A0E98 + 18 + 90 + b0 +b8       float
+% of total meter     address =  "SSFIV.exe"+006A0E98 + 18 + 90 + a8 +8c     float
+stocks of meter          address = "SSFIV.exe"+006A0E98 + 18 + 90 + a8 + a4           1 byte 
+position_x P2             address = SSFIV.exe+6A6000       float  
+position_y P2             address =  SSFIV.exe+6A6004         float
+mvP2                      address  = "SSFIV.exe"+006A0E8C +c +b0 + 18     2 byte 
+Number of buttons pressed by player 2 address =     SSFIV.exe+6A298C     byte
+frames since button pressed     2        address =     SSFIV.exe+6A2990     byte 
+Button Press p2                         address =         SSFIV.exe+6A2888    4 byte   -> SSFIV.exe+6A2974            Also top is         button/frame
+                                                                                                                                                                      bottom is         frame/joystick           
+
+
+
+Character P1     address =                 SSFIV.exe+6A1508      2 byte 
+Health of player 1 %   address = "SSFIV.exe"+006A0E98 +  18 + 90 + 30 +c8      float  
+Grey health            address =   
+ultra meter         address = "SSFIV.exe"+006A0E98 +  18 + 90 + 40 + b8        float
+%of total super  address =   "SSFIV.exe"+006A0E98 +  18 + 90 + 38 + 8c            float
+stocks of meter P1 address =         "SSFIV.exe"+006A0E98 + 18 + 90 + 38 + a4         1 byte       
+position_x P1         address =        "SSFIV.exe"+006A0E8C + 8 + 70                     float   
+position_y P1         address =         "SSFIV.exe"+006A0E8C + 8 + 74              float
+mv state                address= "SSFIV.exe"+006A0E8C  + 8 + b0 +  18          2 byte 
+Number of buttons pressed by player 1 address =     SSFIV.exe+6A2880     byte
+frames since button pressed             address =     SSFIV.exe+6A2884     byte 
+Button Press p1                         address =         SSFIV.exe + 6A277C    4 byte   -> SSFIV+ 6A2878                Also top is         button/frame
+                                                                                                                                                                      bottom is         frame/joystick                                      
+
+
+
+
+Notes:
+character: ryu = 0, bison = 11, 
+Number of Attack buttons which come out during a round:  Byte 
+Mv butto::  crouch 1        neutral     0            forward 16      backward 17             jpN    5         jpF    8        jpB   11 
+
+Stage usual -7.5 to 7.5 
+y position 0 to 2ish depends on character 
+
+
+Define structure for frames since last button pressed and -108
+
+projectiles have float position and bool for if they are on the screen or not
+
+
+Stand:     Lp        Mp        Hp        3p        Lk        Mk        Hk          3k
+              64        128        256     448      512      1024      2048        3584
+
+crouch:    Lp        Mp        Hp        3p        Lk        Mk        Hk          3k                    Back:              Lp                          Down Back:           Lp                Forward:        Lp            Down Forward:        Lp
+              68        132       260     452      516      1028      2052        3588                              +4 ===72                                          +4=====76                        +4=====80                              +4=====80
+
+
+Jump:         Lp        Mp         Hp        3p        Lk        Mk        Hk          3k               Jump Back:                                             Jump Forward:
+stand +2                                                                                                                            back + 2                                                    forward + 2
+                                                                                                                                                                            
+    

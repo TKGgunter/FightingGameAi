@@ -1,0 +1,6 @@
+Window Name:
+SSFIVAE
+
+Exe Name:
+SSFIV.exe
+
